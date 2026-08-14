@@ -1,0 +1,40 @@
+# Visual Studio / .NET
+bin/
+obj/
+.vs/
+*.user
+*.suo
+TestResults/
+
+# Node / Frontend
+node_modules/
+dist/
+build/
+build-check/
+.env
+.env.*
+!.env.example
+*.log
+
+# Python AI generated/runtime files
+__pycache__/
+*.py[cod]
+.venv/
+.uv-cache/
+.uv-python/
+ai_chatbot/.python_packages/
+ai_chatbot/.venv/
+ai_chatbot/.uv-cache/
+ai_chatbot/.uv-python/
+ai_chatbot/__pycache__/
+ai_chatbot/storage/ocr_cache/
+ai_chatbot/storage/vector_db/
+ai_chatbot/chatbot.host*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+.python_packages/
+node_modules/
+__pycache__/
+*.pdf

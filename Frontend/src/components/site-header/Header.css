@@ -1,0 +1,127 @@
+/* Custom CSS for EduNext Registration Page */
+@import url('https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800&display=swap');
+
+:root {
+  /* EduNext Brand Colors (Home Page Standard) */
+  --edn-teal: #08b7aa;
+  --edn-blue: #2f9be7;
+  --edn-purple: #9b75f6;
+  --edn-ink: #111827;
+
+  /* Legacy colors (kept for non-branding elements) */
+  --primary: #105bf0;
+  --primary-dark: #0d4bc7;
+  --bg-light: #f6f6f8;
+  --white: #ffffff;
+  --slate-50: #f8fafc;
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --slate-900: #0f172a;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-400: #60a5fa;
+  --blue-600: #2563eb;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Tajawal", "Noto Sans Arabic", "Inter", ui-sans-serif, system-ui, sans-serif;
+  background-color: var(--bg-light);
+  color: var(--slate-900);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+
+/* Header */
+.header {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--slate-200);
+  position: sticky;
+  top: 0;
+  z-index: 50;
+}
+
+@media (min-width: 1024px) {
+  .header {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo,
+.header-content .logo {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.header-logo-image {
+  display: block;
+  width: clamp(8.25rem, 13vw, 11.5rem);
+  height: 3.25rem;
+  object-fit: contain;
+  object-position: right center;
+}
+
+.logo-icon {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--white);
+  box-shadow: 0 10px 15px -3px rgba(16, 91, 240, 0.2);
+}
+
+.logo-text {
+  font-family: "Tajawal", system-ui, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: 0;
+  color: var(--edn-ink);
+  background: linear-gradient(135deg, var(--edn-blue), var(--edn-teal));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.nav-link {
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: var(--primary-dark);
+}

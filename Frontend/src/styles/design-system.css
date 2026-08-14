@@ -1,0 +1,162 @@
+:root {
+  --edn-bg: #f8fbfd;
+  --edn-surface: #ffffff;
+  --edn-surface-soft: #f2f7fb;
+  --edn-ink: #111827;
+  --edn-muted: #667085;
+  --edn-border: #dfe7ef;
+  --edn-primary: #105bf0;
+  --edn-blue: #2f9be7;
+  --edn-teal: #08b7aa;
+  --edn-purple: #9b75f6;
+  --edn-danger: #ef4444;
+  --edn-success: #16a34a;
+  --edn-warning: #f59e0b;
+  --edn-radius: 18px;
+  --edn-shadow: 0 18px 48px rgba(34, 62, 88, 0.10);
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", "Tajawal", system-ui, sans-serif;
+  color: var(--edn-ink);
+  background:
+    radial-gradient(circle at 82% 8%, rgba(8, 183, 170, 0.12), transparent 28rem),
+    radial-gradient(circle at 12% 16%, rgba(155, 117, 246, 0.10), transparent 27rem),
+    linear-gradient(180deg, #fbfdff 0%, var(--edn-bg) 46%, #f4f7fb 100%);
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+.dashboard-layout {
+  background:
+    radial-gradient(circle at top left, rgba(155, 117, 246, 0.10), transparent 24rem),
+    radial-gradient(circle at top right, rgba(8, 183, 170, 0.10), transparent 25rem),
+    var(--edn-bg);
+}
+
+.dashboard-main {
+  background: transparent;
+}
+
+.dashboard-header,
+.admin-messages-toolbar,
+.admin-messages-table-wrap,
+.admin-messages-empty,
+.admin-message-modal,
+.admin-message-confirm,
+.contact-form,
+.auth-card,
+.login-card,
+.register-card,
+.profile-card,
+.analytics-card,
+.study-plan-card {
+  border: 1px solid rgba(223, 231, 239, 0.9);
+  border-radius: var(--edn-radius);
+  background: rgba(255, 255, 255, 0.92);
+  box-shadow: var(--edn-shadow);
+  backdrop-filter: blur(16px);
+}
+
+.dashboard-greeting,
+.contact-copy h1,
+.auth-title,
+.section-title,
+.admin-page-title {
+  color: var(--edn-ink);
+  letter-spacing: 0;
+}
+
+.dashboard-subgreeting,
+.contact-copy p,
+.admin-message-date,
+.admin-message-preview,
+.section-subtitle {
+  color: var(--edn-muted);
+}
+
+.btn,
+.btn-primary,
+.contact-form button,
+.admin-messages-refresh,
+.admin-message-actions button,
+.admin-message-modal-actions button,
+.sidebar-logout-btn,
+.sidebar-collapse-btn,
+.sidebar-toggle-btn {
+  border-radius: 999px;
+  font-weight: 800;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.btn:hover,
+.btn-primary:hover,
+.contact-form button:hover,
+.admin-messages-refresh:hover,
+.admin-message-actions button:hover,
+.admin-message-modal-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.btn-primary,
+.contact-form .btn-primary,
+.admin-message-modal-actions .primary {
+  border: 0;
+  color: #fff;
+  background: linear-gradient(135deg, var(--edn-primary), var(--edn-teal));
+  box-shadow: 0 14px 30px rgba(16, 91, 240, 0.22);
+}
+
+input,
+textarea,
+select {
+  border-radius: 14px;
+  border: 1px solid var(--edn-border);
+  background: #fff;
+  color: var(--edn-ink);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: 3px solid rgba(16, 91, 240, 0.12);
+  border-color: rgba(16, 91, 240, 0.45);
+}
+
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+th {
+  color: var(--edn-muted);
+  font-weight: 800;
+}
+
+.edn-header,
+.dashboard-sidebar {
+  border-color: rgba(223, 231, 239, 0.78);
+  background: rgba(248, 251, 253, 0.86);
+  backdrop-filter: blur(18px);
+}
+
+
+@media (max-width: 768px) {
+
+  .dashboard-header,
+  .admin-messages-toolbar,
+  .contact-form {
+    border-radius: 16px;
+  }
+}

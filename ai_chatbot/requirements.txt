@@ -1,0 +1,10 @@
+fastapi
+uvicorn
+faiss-cpu
+sentence-transformers
+pypdf
+numpy
+python-dotenv
+google-genai
+pymupdf
+easyocr
