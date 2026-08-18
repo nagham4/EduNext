@@ -3,13 +3,14 @@ using backend.Data.Generated;
 using backend.Repositories.Admin;
 using backend.Repositories.Student;
 using backend.Services.Admin;
+using backend.Services;
 using backend.Services.AI;
 using backend.Services.Auth;
+using backend.Services.Guest;
 using backend.Services.Student;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using backend.Services.Guest;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -30,7 +31,8 @@ builder.Services.AddCors(options =>
             .WithOrigins(
 
                 "http://localhost:8080",
-                "http://127.0.0.1:8080"
+                "http://127.0.0.1:8080",
+                "https://edunext-api-00gx.onrender.com"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
