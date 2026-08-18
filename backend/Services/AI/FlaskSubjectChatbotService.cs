@@ -19,7 +19,7 @@ public class FlaskSubjectChatbotService : ISubjectChatbotService
         var subjectKey = NormalizeSubjectKey(request);
         var baseUrl =
             _configuration[$"AiChatbot:Subjects:{subjectKey}:BaseUrl"] ??
-            _configuration["AiChatbot:BaseUrl"] ??
+            _configuration["AiChatbot_BaseUrl"] ??
             "http://localhost:5001";
         var chatUrl = $"{baseUrl.TrimEnd('/')}/chat";
 
