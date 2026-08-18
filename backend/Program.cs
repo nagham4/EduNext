@@ -32,7 +32,7 @@ builder.Services.AddCors(options =>
 
                 "http://localhost:8080",
                 "http://127.0.0.1:8080",
-                "https://edunext-api-00gx.onrender.com"
+                "https://edunext-palestine1.netlify.app"
             )
             .AllowAnyHeader()
             .AllowAnyMethod();
