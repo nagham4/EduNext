@@ -18,7 +18,7 @@ public class FlaskAiInsightsService : IAiInsightsService
 
     public async Task<AiExamAnalysisResponseDto> AnalyzeExamAsync(AiExamAnalysisRequestDto request, CancellationToken ct = default)
     {
-        var baseUrl = _configuration["AiChatbot_BaseUrl"] ?? "http://localhost:5001";
+        var baseUrl = _configuration["AiChatbot:BaseUrl"] ?? "http://localhost:5001";
         var analysisUrl = $"{baseUrl.TrimEnd('/')}/exam-analysis";
 
         try
@@ -71,7 +71,7 @@ public class FlaskAiInsightsService : IAiInsightsService
         CancellationToken ct = default
     )
     {
-        var baseUrl = _configuration["AiChatbot_BaseUrl"] ?? "http://localhost:5001";
+        var baseUrl = _configuration["AiChatbot:BaseUrl"] ?? "http://localhost:5001";
         var explanationUrl = $"{baseUrl.TrimEnd('/')}/question-explanation";
 
         try
@@ -116,7 +116,7 @@ public class FlaskAiInsightsService : IAiInsightsService
         CancellationToken ct = default
     )
     {
-        var baseUrl = _configuration["AiChatbot_BaseUrl"] ?? "http://localhost:5001";
+        var baseUrl = _configuration["AiChatbot:BaseUrl"] ?? "http://localhost:5001";
         var recommendationUrl = $"{baseUrl.TrimEnd('/')}/personalized-recommendation";
 
         try
